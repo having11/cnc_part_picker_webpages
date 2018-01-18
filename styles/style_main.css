@@ -1,0 +1,160 @@
+#response, #search_title, #search_div{
+	padding-top: 3px;
+	color: black;
+}
+
+#response{
+	font-size:18px;
+	color:blue;
+}
+
+body{
+	font-family: "Verdana", Arial, Helvetica;
+}
+
+#change_parts_cats, #change_parts_from_cat{
+	height: 10px;
+	padding-top: 30px;
+	padding-right: 20px;
+	font-size:20px;
+}
+
+#add_remove_div{
+	width:800px;
+}
+
+#add_cat_form, #remove_cat_form{
+	width:50%;
+}
+
+#add_cat_form{
+	float:left;
+}
+
+.form_comp{
+	display:inline-block;
+}
+
+#remove_cat_form{
+	float:right;
+}
+
+#selection{
+	float:left;
+}
+
+#user_info{
+	float:right;
+}
+
+@keyframes quick_add_animation{
+	from{
+		opacity:0;
+		transform: translate(0px,-50px);
+	}
+	to{
+		opacity:1;
+		transform: translate(0px,0px);
+	}
+}
+
+@keyframes search_animation{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+#quick_add{
+	font-family: "Verdana", Arial, Helvetica;
+	padding-left: 10px;
+	font-size:1em;
+	animation-name: quick_add_animation;
+	animation-timing-function: ease-in-out;
+	animation-duration: 2s;
+}
+
+#search_div{
+	padding: 10px;
+	padding-right:8px;
+	animation-name: search_animation;
+	animation-duration: 4s;
+}
+
+#quick_add, #search_div{
+	display: inline-block;
+}
+
+#search_header{
+	font-size:18px;
+	padding-top:10px;
+}
+
+#quick_add_text, #search_title, #new_cat_title, #remove_cat_title{
+	font-size:1.5em;
+	color:#4F4F4F;
+	font-weight: bold;
+}
+
+#quick_add_text{
+	float:none;
+	padding-left:8em;
+	padding-bottom: 1em;
+}
+
+
+#change_button{
+	font-size: 14px;
+	padding: 8px;
+}
+
+.change_options{
+	width:1em;
+	height:1em;
+}
+
+#search_title{
+	color: #4F4F4F;
+}
+
+#large_table{
+	width: 100%;
+	margin:auto;
+	padding: 10px;
+	font-family: "Verdana", Arial, Helvetica;
+}
+			
+#large_table tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+#large_table tr:hover {
+	background-color: #ddd;
+}
+
+#large_table th{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #4CAF51;
+	color: white;
+}
+
+#search_text_box{
+	width: 60px;
+	border: 2px solid #ccc;
+	box-sizing:border-box;
+	border-radius:2px;
+	font-family: "Verdana";
+	font-weight: none;
+	transition: width 0.3s ease-in-out;
+}
+
+#search_text_box:focus {
+	border-radius: 2px;
+	background-color: white;
+	color: black;
+	width:80%;
+}

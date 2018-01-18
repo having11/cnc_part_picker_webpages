@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles/style_main.css">
+		<title>Part Retriever</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="scripts/main_page.js"></script>
+		<meta charset="UTF-8">
+	</head>
+<body>
+	<div id="selection" style="width:1200px">
+	<form onsubmit="change_parts(this.drop_down_parts.value,this.str.value,this.choice.value,this.drop_down.value);return false;">
+		<script>load_cats("change_parts_cats","true");
+		</script>
+		<div id="change_parts_cats" style="display:inline-block;">
+		</div>
+		<div id="change_parts_from_cat" style="display:inline-block;">
+		</div>
+		<div style="display:inline-block;">
+		<input type="text" name="str" id="change_add_txt" placeholder="Amount or item name">
+		<input type="radio" class="change_options" name="choice" value="Change">Change
+		<input class="change_options" type="radio" name="choice" value="Add new">Add new
+		<input type="radio" class="change_options" name="choice" value="Remove">Remove Part
+		<input id="change_button" type="submit" value="Change">
+		</div>
+	</form>
+	<div id="add_remove_div">
+	<form onsubmit="add_category(this.category_name.value); return false;" id="add_cat_form">
+		<p id="new_cat_title">Add new category:</p>
+		<input type="text" name="category_name" placeholder="New category name" id="add_cat">
+		<input type="submit" value="Add new">
+	</form>
+	<form id="remove_cat_form" onsubmit="delete_category(this.cat_name.value); this.cat_name.value=''; return false;">
+		<p id="remove_cat_title">Remove a category:</p>
+		<div id="cat_list" class="form_comp">
+			<script>
+				load_cats("cat_list","false");
+			</script>
+		</div>
+		<input type=submit value="Remove" class="form_comp">
+	</form>
+	</div>
+	<div id="response" style="display:inline-block;">
+	</div>
+	</div>
+	<div id="user_info">
+		<script>welcome_user(username);</script>
+	</div>
+	<div id="search_div" style="display:inline-block;">
+	<h3 id="search_title">Search for an item</h3><form onsubmit="showItem(this.options.value,this.query.value); return false;">
+		<input name="query" type="text" id="search_text_box">
+		<p id="search_header">Search by: </p>
+		<select name="options">
+		<option value="id">ID</option>
+		<option value="name">Name</option>
+		<option value="category">Category</option>
+		</select>
+		<input type="submit" value="Search" >
+		</form>
+	</div>
+	<div id="quick_add" style="display:inline-block;">
+		<p id="quick_add_text">Quick Add</p>
+		<form onsubmit="quick_add(this.selection.value,this.id_input.value); return false;">
+		ID: <input name="id_input" type="text" id="id_input_text">
+		<input type="radio" name="selection" value="add">Add 1
+		<input type="radio" name="selection" value="subtract">Subtract 1
+		<input type="submit" value="Quick Add">
+		</form>
+	</div>
+	<div>
+		<div id="txtHint" style="top:0px; display:inline-block;">
+		</div>
+		<div id="quick_added" style="display:inline-block;">
+		</div>
+	</div>
+	<br>
+	<div id="large_table">
+	</div>
+	
+</body>
+</html>

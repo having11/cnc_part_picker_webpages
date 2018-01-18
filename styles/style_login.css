@@ -1,0 +1,66 @@
+.title{
+	font-size:20px;
+}
+
+body{
+	font-family: "Verdana", Arial, Helvetica;
+	margin:0;
+	padding: 0;
+	text-align: center;
+	animation-name:start_animation;
+	animation-duration: 3s;
+}
+
+#login_div, #signup_div{
+	padding:10px;
+	float:left;
+	margin-left: auto;
+	margin-right: auto;
+	width:600px;
+	height:500px;
+}
+
+.login_child, .signup_child{
+	width:50%;
+	height:10%;
+	margin:5px auto;
+	font-size:20px;
+}
+
+#login_hint_text, #signup_hint_text{
+	width:60%;
+	color:red;
+	font-size:16px;
+}
+
+@keyframes start_animation{
+	0%{
+		opacity:0;
+		transform:translate(0px,200px);
+	}
+	100%{
+		opacity: 1;
+		transform: translate(0px,0px);
+	}
+}
+
+#input_text, #input_text_pass, #new_user_text, #new_user_pass, #new_user_pass_redo{
+	width:50%;
+	border:3px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 1px;
+	transition: width 0.5s ease-in-out;
+	box-shadow: 5px 5px 2px grey;
+}
+
+#input_text:focus, #input_text_pass:focus{
+	border-radius: 2px;
+	background-color: white;
+	width:60%;
+}
+
+
+
+
+
+

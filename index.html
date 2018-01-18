@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles/style_login.css">
+		<title>Login</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="scripts/login.js"></script>
+		<meta charset="UTF-8">
+	</head>
+<body>
+	<div id="login_div">
+	<div id="instruction_text" class="login_child">
+		<p class="title" id="title_text">Login here:</p>	
+	</div>
+	<div id="form_div">
+	<form onsubmit="login(this.user_text.value, this.pass_text.value); return false;">
+	<input type="text" name="user_text" placeholder="Username" class="login_child" id="input_text">
+	<input type="password" name="pass_text" placeholder="Password" class="login_child" id="input_text_pass">
+	<input type="button" value="Login" onclick="login(user_text.value, pass_text.value); return false;" class="login_child">
+	</form>
+	</div>
+	<div><p class="login_child" id="login_hint_text"></p></div>
+	</div>
+	<div id="signup_div">
+	<div id="signup_text" class="signup_child">
+		<p class="title">Or sign up here:</p>	
+	</div>
+	<div id="signup_form">
+		<form onsubmit="signup(new_user.value,new_pass.value,new_pass_redo.value); return false;">
+			<input type="text" name="new_user" class="signup_child" id="new_user_text" placeholder="New username">
+			<input type="password" name="new_pass" class="signup_child" id="new_user_pass" placeholder="New password" onKeyUp="check_password_contain(this.value); return false;">
+			<input type="password" name="new_pass_redo" class="signup_child" id="new_user_pass_redo" placeholder="Retype password" onKeyUp="check_passwords_same(this.value); return false;">
+			<input type="submit" value="Sign up" class="signup_child">
+		</form>
+		
+	</div>
+	<div>
+		<p class="signup_child" id="signup_hint_text"></p>
+	</div>
+	
+	</div>
+	
+	
+	
+	
+	
+</body>
+</html>
